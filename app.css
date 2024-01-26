@@ -3,6 +3,7 @@
 
 *{
     padding: 0;
+    margin: 0;
 }
 body{
     
@@ -15,28 +16,46 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1rem;
+    /* padding: 1rem;
+    padding-right: 0; */
+    padding: 1rem 0;
+    /* padding-left: 1rem; */
+    
+    /* position: fixed; */
+    width: 100%;
+    background-color: rgb(88, 248, 57);
 }
 header img{
     max-width: 240px;
+    margin-left: 1rem;
 }
 header ul{
     display: none;
     justify-content: space-between;
     width: 50%;
 }
-header li{
+.menu li{
     list-style-type: none;
+    transition: 0.4s;
 }
-header a{
+.menu li:hover{
+    transform: translateY(-6px);
+}
+.menu a{
     text-decoration: none;
     color: #636060;
+    transition: 0.4s;
+}
+.menu a:hover{
+    color: white;
+    
 }
 header button{
     opacity: 0;
 }
+
 .hamburger{
-    padding-right: 1rem;
+    padding-right: 30px;
     right: 0;
     transition: 0.4s;
 }
@@ -53,7 +72,7 @@ header button{
     margin: 6px 0;
 }
 .slide-menu{
-    background-color: #397a29;
+    background-color: #5e5d27;
     width: 50%;
     height: 96.5%;
     position: absolute;
@@ -63,11 +82,17 @@ header button{
     transition: 0.5s;
     box-shadow: 0px -2px 20px 10px #87367d;
 }
+.slide-menu li{
+    list-style-type: none;
+}
+.slide-menu a{
+    text-decoration: none;
+}
 .slide-menu h2{
     color: white;
     font-size: 2rem;
     text-align: center;
-    text-decoration: underline;
+    padding-top: 2rem;
 }
 .slide-menu h1{
     color: red;
@@ -105,7 +130,7 @@ header button{
     background-color: #fff;
 }
 .popup-menu a{
-    font-size: x-large;
+    /* font-size: x-large; */
     display: block;
     text-align: center;
     color: #ff006a;
@@ -308,8 +333,10 @@ background-image: none ;
 }
 .individual-card{
     background-color: rgba(51, 51, 124, 0.199);
-    padding: 0.7rem 3rem;
+    padding: 3rem 4rem;
     border-radius: 2rem;
+    max-width: 13rem;
+    margin: auto;
 }
 .individual-card img{
    
@@ -319,6 +346,7 @@ background-image: none ;
     color: white;
     font-size: 2rem;
     text-align: center;
+    padding-bottom: 2rem;
     
 }
 .individual-card p{
@@ -353,7 +381,7 @@ background-image: none ;
     padding-left: 2rem;
 }
 .section5-news{
-    padding-bottom: 6rem;
+    padding: 6rem 0;
     
 }
 .section5-news h2{
@@ -378,6 +406,13 @@ background-image: none ;
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 1rem;
+    margin-top: 2rem;
+    transition: 0.4s;
+}
+.section5-news button:hover{
+    background-color: #1409647e;
+    border: 2px solid #df1cff;
+    cursor: pointer;
 }
 
 .section5-cards{
@@ -386,11 +421,13 @@ background-image: none ;
 
 .section5-cards img{
     width: 100%;
+    margin-bottom: 1.6rem;
 }
 .section5-cards h4{
     color: white;
     font-size: 1.4rem;
     letter-spacing: 1px;
+    padding-top: 1rem;
 }
 .section-6{
     padding-left: 2rem;
@@ -429,13 +466,22 @@ background-image: none ;
     border-radius: 0.3rem;
     display: block;
     margin: auto;
+    transition: 0.4s;
 }
+.section6-first button:hover{
+    background-color: #fff;
+    color: #df1cff;
+    cursor: pointer;
+   
+}
+
 .socials{
     width: 100%;
    
     
     margin: 4rem auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 2rem;
@@ -452,6 +498,10 @@ background-image: none ;
     background-color: rgba(51, 51, 124, 0.199);
     color: white;
     /* width: 100%; */
+    transition: 0.4s;
+}
+.socials a:hover{
+    transform: translateY(-8px);
 }
  hr {
    
@@ -462,7 +512,7 @@ background-image: none ;
 }
 
 footer{
-    padding: 1rem 0;
+    padding: 2rem 0;
     color: #948f8f;
 }
 
@@ -489,12 +539,18 @@ footer h3{
 
     header button{
         opacity: 1;
-        background-color: #6c3d7452;
+        background-color: #5a44d4e1;
         color: white;
         padding: 0.8rem 1.7rem;
-        border-image-slice: 1;
-            border-image-source: linear-gradient(to right, rgba(182, 43, 201, 0.97), rgba(93, 62, 97, 0.97));
+        border: none;
+        transition: 0.4s;
     }
+        header button:hover {
+            background-color: #fff;
+            color: #5a44d4e1;
+            border: 2px solid #5a44d4e1;
+            cursor: pointer;
+        }
 
     .illustration{
         display: flex;
@@ -543,11 +599,11 @@ footer h3{
         display: flex;
         flex-wrap: wrap;
     }
-   .individual-card{
+   /* .individual-card{
     width: 200px;
     height: 340px;
     place-self: center;
-   }
+   } */
    .section-4{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -574,4 +630,9 @@ footer h3{
         justify-content: center;
         padding: 8rem;
     }
+        .section5-illustrations {
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+        }
 }
