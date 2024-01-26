@@ -53,18 +53,21 @@ header button{
     margin: 6px 0;
 }
 .slide-menu{
-    background-color: #111231;
+    background-color: #397a29;
     width: 50%;
-    height: 96%;
+    height: 96.5%;
     position: absolute;
     top: 1%;
-    right: 100%;
+    right: 130%;
+    border: 5px solid rgba(255, 252, 252, 0.397);
     transition: 0.5s;
+    box-shadow: 0px -2px 20px 10px #87367d;
 }
 .slide-menu h2{
     color: white;
     font-size: 2rem;
     text-align: center;
+    text-decoration: underline;
 }
 .slide-menu h1{
     color: red;
